@@ -4,19 +4,36 @@
     <meta charset="utf-8"/>
     <title>네이버</title>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/> <!--(./)현재폴더-->
+    <link rel="stylesheet" href="./naver.css">
 </head>
 <!-- div 가로줄 차지 화면 나눌때는 가로->세로 -->
 <body>
-    <div style="margin: 0 auto; width: 1080px;"> <!--가운데 정렬용 div-->
-        <header> 
-            <h1><a href="https://www.naver.com">네이버</a></h1>
-            <fieldset>
-                <legend>검색</legend>
-                <input type="text">
-                <button>검색</button>
-            </fieldset>
-        </header>
-    </div>  
+    <header> 
+        <div id = "header-center"> <!--가운데 정렬용 div-->
+            <div id="upnavi">
+                <!-- block 가로 전체 inline 자기자신 inline block 높이 넓이 지정 -->
+                <span>네이버를 시작페이지로</span>
+                <span>쥬니어네이버</span>
+                <span>해피빈</span>
+            </div>
+            <div id="header-search">
+                <a href="https://www.naver.com">
+                    <h1>
+                        <span>네이버</span>
+                    </h1>
+                </a>
+                <h2 class="blind">검색창</h2>
+                <fieldset>
+                    <legend class="blind">검색</legend>
+                    <input type="text">
+                    <button>
+                        <span class="blind">검색</span>
+                        <span id="search-image"></span>
+                    </button>
+                </fieldset>
+            </div>  
+        </div>  
+    </header>
     <nav>
         <ul>
             <li>메일</li>

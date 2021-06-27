@@ -1,0 +1,98 @@
+/* 모든 태그에 공통적 적용 */
+*{
+    box-sizing: border-box; /*boarder padding content 합해서 계산 */
+}
+div#header-center{
+    margin: 0 auto; 
+    width: 1080px;
+}
+
+/* 자식 */
+div#header-search h1{
+    width: 200px;
+    height: 48px;
+    display: inline-block;
+    /* background-image: url(./sp_search.png);
+    background-position: -4px -10px; */
+    text-indent: 10%; /*들여쓰기 */
+    overflow: hidden;/* 바깥으로 나간게 안보이게 함 */
+    /* background-repeat: no-repeat; 이미지가 공간보다 작아도 한번만 반복 */
+    background: url(./sp_search.png) -4px -10px no-repeat;
+}
+
+/* 자손 자식의 자식
+div#header-center h1 {
+
+} */
+
+/* span 태그 대체 */
+/* #upnavi div{
+    display: inline-block;
+    
+} */
+#header-search h1 span{
+    display: none;
+}
+
+#header-search a{
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#header-search h2{
+    display: none;
+}
+
+#header-search fieldset{
+    margin-left: 20px;
+    /* padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px; */
+    padding: 12px 0 12px 10px;
+    border:2px solid #03cf5d; /* hex */
+    width: 521px;
+    height: 49px;
+    display: inline-block;
+    vertical-align: middle; /* 재정렬 */
+   
+}
+
+#header-search fieldset input{
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: top;
+    width: 405px;
+    height: 23px;
+    display: inline-block;
+}
+
+#header-search fieldset button{
+    width: 49px;
+    height: 49px;
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+  
+}
+
+
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip :rect(0 0 0 0);
+    margin : -1px;
+    width : 1px;
+    height : 1px;
+}
+
+#search-image{
+    background-image: url(./sp_search.png);
+    background-position: -3px -60px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+}
