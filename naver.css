@@ -2,9 +2,34 @@
 *{
     box-sizing: border-box; /*boarder padding content 합해서 계산 */
 }
-div#header-center{
+
+/* 비주얼 스튜디오 코드 한컴입력기 확인 단축 안먹을떄 */
+/* 웹 페이지 기본 css 제거 */
+html, body{
+    margin:0;
+    padding:0;
+    font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+
+.center-align{
     margin: 0 auto; 
     width: 1080px;
+}
+
+
+header {
+    height: 170px;
+}
+
+/* 화면 고정 홈페이지 장바구니 그런 역활에 쓰일 듯 */
+#fixed{
+    right: 0;
+    position: fixed;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
 }
 
 /* 자식 */
@@ -18,7 +43,11 @@ div#header-search h1{
     overflow: hidden;/* 바깥으로 나간게 안보이게 함 */
     /* background-repeat: no-repeat; 이미지가 공간보다 작아도 한번만 반복 */
     background: url(./sp_search.png) -4px -10px no-repeat;
+    position: relative;
+    top: 2px;
 }
+/* 컨테이닝 블럭 태그들관의 관계 relative 등을 통해 자식 부모 등의 배치 가능 */
+/* 왼->오 - 위->아래 + */
 
 /* 자손 자식의 자식
 div#header-center h1 {
@@ -32,6 +61,32 @@ div#header-center h1 {
 } */
 #header-search h1 span{
     display: none;
+}
+
+
+#header-top {
+    /* display: flex;
+    justify-content: flex-end; */
+
+    float: right;
+    margin-top: 8px;
+}
+
+#header-top span {
+    color: #888;
+    letter-spacing: -1px;/*  글자 사이 간격 */
+    font-size: 11px;
+    line-height: 22px;
+}
+
+#header-search {
+    clear: both; /* float 영역이랑 분리  */
+    padding-top: 12px;
+    vertical-align: middle;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
 }
 
 #header-search a{
@@ -55,6 +110,7 @@ div#header-center h1 {
     height: 49px;
     display: inline-block;
     vertical-align: middle; /* 재정렬 */
+    position: relative; /* 주어진 픽셀만큼 이동 */
    
 }
 
@@ -70,13 +126,16 @@ div#header-center h1 {
 
 #header-search fieldset button{
     width: 49px;
-    height: 49px;
+    height: 48px;
     border: none;
     padding: 0;
     background: #03cf5d;
+    position: absolute; /* static 속성이 아닌 부모를 기준으로 이동 */
+    right: -2px;
+    top: -1px;
   
 }
-
+/* fixed 고정 */
 
 .blind{
     position: absolute;
@@ -94,5 +153,180 @@ div#header-center h1 {
     display: inline-block;
     width: 21px;
     height: 21px;
+    /* position: relative;
+    top:50%;
+    transform:translateY(-50%); 세로가운데 정렬?*/
+
+}
+
+
+.relative {
+    position: relative;
+}
+
+
+nav {
+    height: 46px;
+    border-top: 1px solid #f1f3f6;
+    border-bottom: 1px solid #d1d8e4;
+}
+
+nav ul{
+    display: inline-block;
+    margin:0;
+    padding:0;
+    padding: 16px 0 0 4px;
+    list-style:none;
+}
+
+nav li{
     display: inline-block;
 }
+
+/* flex도 알아두기 */
+/* nth-child 유지보수에 안좋음 안쓰는걸 권장 */
+nav li:first-child span:first-child {
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0;
+}
+
+nav li span:first-child {
+    height: 16px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
+    background-repeat: no-repeat;
+    margin-left: 14px;
+}
+
+nav li:nth-child(2) span:first-child {
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
+}
+
+#search-keyboard {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg);
+    background-repeat: no-repeat;
+    background-position: -33px -60px;
+    width: 19px;
+    height: 11px;
+    display: inline-block;
+    margin: 0 0px;
+    vertical-align: middle;
+}
+
+#search-history {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg);
+    background-repeat: no-repeat;
+    background-position: -87px -60px;
+    width: 9px;
+    height: 4px;
+    display: inline-block;
+    margin: 0 6px;
+    vertical-align: middle;
+}
+
+nav li:nth-child(7) span:first-child {
+    width: 35px;
+    background-position: -125px -130px;
+}
+
+nav li:nth-child(8) span:first-child {
+    width: 26px;
+    background-position: -279px -208px;
+}
+
+nav li:nth-child(9) span:first-child {
+    width: 26px;
+    background-position: -128px -104px;
+}
+
+nav li:nth-child(10) span:first-child {
+    width: 26px;
+    background-position: -36px -259px;
+}
+
+nav li:nth-child(11) span:first-child {
+    width: 39px;
+    background-position: -151px -156px;
+}
+
+nav li:nth-child(12) span:first-child {
+    width: 26px;
+    background-position: -279px -130px;
+}
+
+nav li:nth-child(13) span:first-child {
+    width: 26px;
+    background-position: -234px -233px;
+}
+
+nav li:nth-child(14) span:first-child {
+    width: 26px;
+    background-position: -72px -259px;
+}
+
+nav li:nth-child(15) span:first-child {
+    width: 13px;
+    background-position: -140px -78px;
+}
+
+nav li:nth-child(16) span:first-child {
+    width: 26px;
+    background-position: -279px 0;
+}
+
+nav li.more:first-child span:first-child {
+    width: 55px;
+    background-position: 0 -104px;
+}
+
+.nav-divider {
+    display: inline-block;
+    margin: 18px 16px 0;
+    width: 1px;
+    height: 14px;
+    background: #ebeef3;
+}
+
+#search-ranking {
+    position: absolute;
+    top: 9px;
+    right: 100px;
+}
+
+#rank-number {
+    margin-top: -9px;
+    color: #00ab33;
+    font-size: 16px;
+}
+
+#rank-title {
+    letter-spacing: -1px;
+    font-size: 14px;
+}
+
+main {
+    background-color: #f2f4f7;
+}
+
