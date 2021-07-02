@@ -181,19 +181,19 @@ nav ul{
     list-style:none;
 }
 
-nav li{
+#nav-menu li{
     display: inline-block;
 }
 
 /* flex도 알아두기 */
 /* nth-child 유지보수에 안좋음 안쓰는걸 권장 */
-nav li:first-child span:first-child {
+#nav-menu li:first-child span:first-child {
     width: 25px;
     background-position: 0 -285px;
     margin-left: 0;
 }
 
-nav li span:first-child {
+#nav-menu li span:first-child {
     height: 16px;
     display: inline-block;
     background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
@@ -201,27 +201,27 @@ nav li span:first-child {
     margin-left: 14px;
 }
 
-nav li:nth-child(2) span:first-child {
+#nav-menu li:nth-child(2) span:first-child {
     width: 27px;
     background-position: -279px -52px;
 }
 
-nav li:nth-child(3) span:first-child {
+#nav-menu li:nth-child(3) span:first-child {
     width: 40px;
     background-position: -100px -182px;
 }
 
-nav li:nth-child(4) span:first-child {
+#nav-menu li:nth-child(4) span:first-child {
     width: 40px;
     background-position: -101px -156px;
 }
 
-nav li:nth-child(5) span:first-child {
+#nav-menu li:nth-child(5) span:first-child {
     width: 26px;
     background-position: -279px -156px;
 }
 
-nav li:nth-child(6) span:first-child {
+#nav-menu li:nth-child(6) span:first-child {
     width: 25px;
     background-position: -70px -285px;
 }
@@ -248,57 +248,57 @@ nav li:nth-child(6) span:first-child {
     vertical-align: middle;
 }
 
-nav li:nth-child(7) span:first-child {
+#nav-menu li:nth-child(7) span:first-child {
     width: 35px;
     background-position: -125px -130px;
 }
 
-nav li:nth-child(8) span:first-child {
+#nav-menu li:nth-child(8) span:first-child {
     width: 26px;
     background-position: -279px -208px;
 }
 
-nav li:nth-child(9) span:first-child {
+#nav-menu li:nth-child(9) span:first-child {
     width: 26px;
     background-position: -128px -104px;
 }
 
-nav li:nth-child(10) span:first-child {
+#nav-menu li:nth-child(10) span:first-child {
     width: 26px;
     background-position: -36px -259px;
 }
 
-nav li:nth-child(11) span:first-child {
+#nav-menu li:nth-child(11) span:first-child {
     width: 39px;
     background-position: -151px -156px;
 }
 
-nav li:nth-child(12) span:first-child {
+#nav-menu li:nth-child(12) span:first-child {
     width: 26px;
     background-position: -279px -130px;
 }
 
-nav li:nth-child(13) span:first-child {
+#nav-menu li:nth-child(13) span:first-child {
     width: 26px;
     background-position: -234px -233px;
 }
 
-nav li:nth-child(14) span:first-child {
+#nav-menu li:nth-child(14) span:first-child {
     width: 26px;
     background-position: -72px -259px;
 }
 
-nav li:nth-child(15) span:first-child {
+#nav-menu li:nth-child(15) span:first-child {
     width: 13px;
     background-position: -140px -78px;
 }
 
-nav li:nth-child(16) span:first-child {
+#nav-menu li:nth-child(16) span:first-child {
     width: 26px;
     background-position: -279px 0;
 }
 
-nav li.more:first-child span:first-child {
+#nav-menu li.more:first-child span:first-child {
     width: 55px;
     background-position: 0 -104px;
 }
@@ -311,10 +311,47 @@ nav li.more:first-child span:first-child {
     background: #ebeef3;
 }
 
+#z-example{
+    position: absolute;
+    background:yellow;
+    width: 100px;
+    height: 100px;
+    z-index: 1; /* 쌓임 맥락 */
+}
+
+#search-ranking:hover ul{
+    display: inline-block;
+}
+
+#z-inner{
+    position: absolute;
+    background:red;
+    width: 50px;
+    height: 50px;
+    z-index: 1000; /* 쌓임 맥락 */
+}
+
+#search-ranking ul {
+    position:absolute;
+    top: -15px;
+    right:0;
+    margin: 0;
+    padding: 17px;
+    display: none;
+    list-style: none;
+    width: 332px;
+    height: 334px;
+    border: 1px solid #aaa;
+    background-color: white;
+    z-index: 100; /* 쌓임 맥락 부모는 부모끼리 */
+} 
+
 #search-ranking {
     position: absolute;
-    top: 9px;
-    right: 100px;
+    top: 14px;
+    right: 0;
+    width: 198px;
+    height: 20px;
 }
 
 #rank-number {
@@ -350,6 +387,36 @@ main {
     float: left; /* float을 사용 inline-block문제점 해결, 다만 부모 컨테이너가 인식을 못함 */
 }
 
+#main-login .login-signup{
+    float: right;
+    font-size: 12px;
+    line-height: 38px;
+    color: #666;
+    text-decoration: none;
+}
+
+#main-login .login-signup:hover{
+    text-decoration: underline;
+}
+
+#main-login .login-text{
+    color: #888;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#main-login .login-wrapper a{
+   display: block;
+}
+
+#main-login .login-img{
+    margin-top: 12px;
+    background: url(./sp_login.png) 0 -47px no-repeat;
+    display: inline-block;
+    width: 280px;
+    height: 37px;
+}
+
 #main-login{
     width: 332px;
     height: 120px;
@@ -358,6 +425,10 @@ main {
     float: left;
 
 
+}
+
+#main-login .login-wrapper{
+    padding: 15px 25px;
 }
 
 .float-left{
@@ -473,6 +544,79 @@ main {
 #main-shopping iframe{
     width: 100%;
     height: 100%;
+
+}
+
+#sub-all{
+    background-position: -218px -257px;
+}
+#sub-list{
+    background-position: -218px -257px;
+}
+
+#sub-pre{
+    background-position: -320px 0;
+}
+
+#sub-next{
+    background-position: -320px -52px;
+}
+
+
+
+#subject-all span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    width: 20px;
+    height: 14px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -218px -257px;
+}
+
+#subject-prev span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -320px 0;
+}
+
+#subject-next span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -320px -52px;
+}
+
+section {
+    border: 1px solid #dee3eb;
+}
+
+#sub-list, #sub-all, #sub-pre, #sub-next{
+    float:left;
+    height: 45px;
+}
+
+#sub-all, #sub-pre, #sub-next{
+   width: 45px;
+   background-color: white;
+   border: none;
+   border-left: 1px solid #ebeef3;
+}
+
+#main-category-top{
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #ebeef3;
 
 }
 

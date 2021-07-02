@@ -24,16 +24,18 @@
                     </h1>
                 </a>
                 <h2 class="blind">검색창</h2>
+                <form class="inline-block" action="https://github.com/ZeroCho/html-css-naver/blob/master/ch7/naver.css">
                 <fieldset>
                     <legend class="blind">검색</legend>
                     <input type="text">
                     <span id="search-keyboard"></span>
                     <span id="search-history"></span>
-                    <button>
+                    <button type="submit">
                         <span class="blind">검색</span>
                         <span id="search-image"></span>
                     </button>
                 </fieldset>
+              </form>
             </div>  
         </div>  
     </header>
@@ -41,10 +43,41 @@
         <div class="center-align relative">
           <div id="search-ranking">
             <h2 class="blind">실시간 검색어</h2>
-            <span id="rank-number">1</span>
-            <span id="rank-title">제로초</span>
+            <div>
+              <span id="rank-number">1</span>
+              <span id="rank-title">제로초</span>
+            </div>
+            <ul>
+              <li>
+                <span class="rank-number">2</span>
+                <span class="rank-title">제로초</span>
+              </li>
+              <li>
+                <span class="rank-number">3</span>
+                <span class="rank-title">제로초</span>
+              </li>
+              <li>
+                <span class="rank-number">4</span>
+                <span class="rank-title">제로초</span>
+              </li>
+              <li>
+                <span class="rank-number">5</span>
+                <span class="rank-title">제로초</span>
+              </li>
+              <li>
+                <span class="rank-number">6</span>
+                <span class="rank-title">제로초</span>
+              </li>
+              <li>
+                <span class="rank-number">7</span>
+                <span class="rank-title">제로초</span>
+              </li>
+            </ul>
+            <!-- <div id="z-example">
+              <div id="z-inner"></div>
+            </div> -->
           </div>
-          <ul> <!-- unordered list --> <!-- ol 태그도 있어요 ordered list -->
+          <ul id="nav-menu"> <!-- unordered list --> <!-- ol 태그도 있어요 ordered list -->
             <li>
               <a href="">
                 <span class="nav-item-mail"></span>
@@ -78,7 +111,18 @@
         <div id="main-first-block">
           <div id="main-ad"></div>
           <div id="main-login">
-            <h3>로그인</h3>
+            <h3 class="blind">로그인</h3>
+            <div class="login-wrapper">
+              <span class="login-text">네이버를 더 안전하고 편리하게 이용하세요</span>
+              <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
+                <span class="blind">NAVER 로그인</span>
+                <span class="login-img"></span>
+              </a>
+            
+              <a 
+                class="login-signup"
+                href="https://nid.naver.com/nidregister.form?url=https%3A%2F%2Fwww.naver.com">회원가입</a>
+            </div>
           </div>
         </div>
         <div id="main-second-block">
@@ -109,7 +153,19 @@
           </div>
           <div id="main-third-block">
             <div id="main-category">
-              <h3>주제별 보기</h3>
+              <h3 class = "blind">주제별 보기</h3>
+              <div id="main-category-top">
+                <button id = "sub-all">
+                  <span class="blind">전체 주제 열기</div>
+                </button>
+                <div id="sub-list"></div>
+                <button id = "sub-pre">
+                  <span class="blind">이전 주제</div>
+                </button>
+                <button id = "sub-next">
+                  <span class="blind">다음 주제</div>
+                </button>
+              </div>
             </div>
             <div id="main-shopping">
               <iframe src = "https://castbox.shopping.naver.com/shoppingboxnew/main.nhn" 
