@@ -1,30 +1,30 @@
 /* 마진 상쇄 해결 방법 inline-block에 width 100% */
 /* 모든 태그에 공통적 적용 */
 /* 가로는 float로 세로는 vertical-align top으로 해결 부모에게 적용할것 */
-*{
+* {
     box-sizing: border-box; /*boarder padding content 합해서 계산 */
 }
 
 /* 비주얼 스튜디오 코드 한컴입력기 확인 단축 안먹을떄 */
 /* 웹 페이지 기본 css 제거 */
-html, body{
-    margin:0;
-    padding:0;
-    font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Dotum, '돋움', Helvetica, 'Apple SD Gothic Neo', sans-serif;
 }
 
-.center-align{
-    margin: 0 auto; 
+.center-align {
+    margin: 0 auto;
     width: 1080px;
 }
-
 
 header {
     height: 170px;
 }
 
 /* 화면 고정 홈페이지 장바구니 그런 역활에 쓰일 듯 */
-#fixed{
+#fixed {
     right: 0;
     position: fixed;
     display: inline-block;
@@ -35,16 +35,16 @@ header {
 }
 
 /* 자식 */
-div#header-search h1{
+div#header-search h1 {
     width: 200px;
     height: 48px;
     display: inline-block;
     /* background-image: url(./sp_search.png);
     background-position: -4px -10px; */
     text-indent: 10%; /*들여쓰기 */
-    overflow: hidden;/* 바깥으로 나간게 안보이게 함 */
+    overflow: hidden; /* 바깥으로 나간게 안보이게 함 */
     /* background-repeat: no-repeat; 이미지가 공간보다 작아도 한번만 반복 */
-    background: url(./sp_search.png) -4px -10px no-repeat;
+    background: url(./img/sp_search.png) -4px -10px no-repeat;
     position: relative;
     top: 2px;
 }
@@ -59,12 +59,11 @@ div#header-center h1 {
 /* span 태그 대체 */
 /* #upnavi div{
     display: inline-block;
-    
+
 } */
-#header-search h1 span{
+#header-search h1 span {
     display: none;
 }
-
 
 #header-top {
     /* display: flex;
@@ -76,7 +75,7 @@ div#header-center h1 {
 
 #header-top span {
     color: #888;
-    letter-spacing: -1px;/*  글자 사이 간격 */
+    letter-spacing: -1px; /*  글자 사이 간격 */
     font-size: 11px;
     line-height: 22px;
 }
@@ -88,35 +87,33 @@ div#header-center h1 {
     /* display: flex;
     align-items: center;
     justify-content: center; */
-
 }
 
-#header-search a{
+#header-search a {
     text-decoration: none;
     vertical-align: middle;
 }
 
-#header-search h2{
+#header-search h2 {
     display: none;
 }
 
-#header-search fieldset{
+#header-search fieldset {
     margin-left: 20px;
     /* padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px; */
     padding: 12px 0 12px 10px;
-    border:2px solid #03cf5d; /* hex */
+    border: 2px solid #03cf5d; /* hex */
     width: 521px;
     height: 49px;
     display: inline-block;
     vertical-align: middle; /* 재정렬 */
     position: relative; /* 주어진 픽셀만큼 이동 */
-   
 }
 
-#header-search fieldset input{
+#header-search fieldset input {
     border: none;
     padding: 0;
     outline: none;
@@ -126,7 +123,7 @@ div#header-center h1 {
     display: inline-block;
 }
 
-#header-search fieldset button{
+#header-search fieldset button {
     width: 49px;
     height: 48px;
     border: none;
@@ -135,21 +132,20 @@ div#header-center h1 {
     position: absolute; /* static 속성이 아닌 부모를 기준으로 이동 */
     right: -2px;
     top: -1px;
-  
 }
 /* fixed 고정 */
 
-.blind{
+.blind {
     position: absolute;
     overflow: hidden;
-    clip :rect(0 0 0 0);
-    margin : -1px;
-    width : 1px;
-    height : 1px;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
 }
 
-#search-image{
-    background-image: url(./sp_search.png);
+#search-image {
+    background-image: url(./img/sp_search.png);
     background-position: -3px -60px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -158,14 +154,11 @@ div#header-center h1 {
     /* position: relative;
     top:50%;
     transform:translateY(-50%); 세로가운데 정렬?*/
-
 }
-
 
 .relative {
     position: relative;
 }
-
 
 nav {
     height: 46px;
@@ -173,15 +166,15 @@ nav {
     border-bottom: 1px solid #d1d8e4;
 }
 
-nav ul{
+nav ul {
     display: inline-block;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     padding: 16px 0 0 4px;
-    list-style:none;
+    list-style: none;
 }
 
-#nav-menu li{
+#nav-menu li {
     display: inline-block;
 }
 
@@ -311,30 +304,30 @@ nav ul{
     background: #ebeef3;
 }
 
-#z-example{
+#z-example {
     position: absolute;
-    background:yellow;
+    background: yellow;
     width: 100px;
     height: 100px;
     z-index: 1; /* 쌓임 맥락 */
 }
 
-#search-ranking:hover ul{
+#search-ranking:hover ul {
     display: inline-block;
 }
 
-#z-inner{
+#z-inner {
     position: absolute;
-    background:red;
+    background: red;
     width: 50px;
     height: 50px;
     z-index: 1000; /* 쌓임 맥락 */
 }
 
 #search-ranking ul {
-    position:absolute;
+    position: absolute;
     top: -15px;
-    right:0;
+    right: 0;
     margin: 0;
     padding: 17px;
     display: none;
@@ -344,7 +337,7 @@ nav ul{
     border: 1px solid #aaa;
     background-color: white;
     z-index: 100; /* 쌓임 맥락 부모는 부모끼리 */
-} 
+}
 
 #search-ranking {
     position: absolute;
@@ -372,13 +365,13 @@ main {
 }
 
 /* 부모 컨테이너 인식되게 함 */
-#main-first-block{
+#main-first-block {
     display: inline-block;
     width: 100%;
     vertical-align: top;
 }
 
-#main-ad{
+#main-ad {
     width: 740px;
     height: 120px;
     background-color: #555;
@@ -387,7 +380,7 @@ main {
     float: left; /* float을 사용 inline-block문제점 해결, 다만 부모 컨테이너가 인식을 못함 */
 }
 
-#main-login .login-signup{
+#main-login .login-signup {
     float: right;
     font-size: 12px;
     line-height: 38px;
@@ -395,47 +388,45 @@ main {
     text-decoration: none;
 }
 
-#main-login .login-signup:hover{
+#main-login .login-signup:hover {
     text-decoration: underline;
 }
 
-#main-login .login-text{
+#main-login .login-text {
     color: #888;
     font-size: 12px;
     line-height: 14px;
 }
 
-#main-login .login-wrapper a{
-   display: block;
+#main-login .login-wrapper a {
+    display: block;
 }
 
-#main-login .login-img{
+#main-login .login-img {
     margin-top: 12px;
-    background: url(./sp_login.png) 0 -47px no-repeat;
+    background: url(./img/sp_login.png) 0 -47px no-repeat;
     display: inline-block;
     width: 280px;
     height: 37px;
 }
 
-#main-login{
+#main-login {
     width: 332px;
     height: 120px;
     vertical-align: top;
     background-color: white;
     float: left;
-
-
 }
 
-#main-login .login-wrapper{
+#main-login .login-wrapper {
     padding: 15px 25px;
 }
 
-.float-left{
+.float-left {
     float: left;
 }
 
-#main-second-block{
+#main-second-block {
     display: inline-block;
     vertical-align: top;
     margin-bottom: 8px;
@@ -449,24 +440,24 @@ main {
 #main-second-block .float-left:last-child {
     width: 332px;
     vertical-align: top;
-
 }
 
-#main-ytn h3, #main-newsstand h3{
+#main-ytn h3,
+#main-newsstand h3 {
     font-size: 14px;
-    font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+    font-family: NanumSquare, Dotum, '돋움', Helvetica, AppleSDGothicNeo,
+        sans-serif;
     line-height: 16px;
-    padding-top:  15px;
-    padding-left:  15px;
+    padding-top: 15px;
+    padding-left: 15px;
 }
 
-#main-ytn{
+#main-ytn {
     display: inline-block;
     width: 740px;
     height: 46px;
     background-color: white;
     margin-bottom: 8px;
-
 }
 
 #main-ytn h3,
@@ -474,9 +465,7 @@ main {
     display: inline-block;
 }
 
-
-
-#main-newsstand{
+#main-newsstand {
     display: inline-block;
     width: 740px;
     height: 246px;
@@ -495,8 +484,6 @@ main {
     margin: 0;
     padding: 0;
     list-style: none;
-   
-    
 }
 
 #main-newsstand li {
@@ -514,7 +501,7 @@ main {
     transform: translateY(-50%);
 }
 
-#main-weather{
+#main-weather {
     display: inline-block;
     width: 332px;
     height: 142px;
@@ -523,16 +510,15 @@ main {
     margin-bottom: 8px;
 }
 
-#main-second-ad{
+#main-second-ad {
     display: inline-block;
     width: 332px;
     height: 150px;
     background: #555;
     vertical-align: top;
-
 }
 
-#main-category{
+#main-category {
     float: left;
     width: 740px;
     height: 882px;
@@ -541,7 +527,7 @@ main {
     margin-bottom: 8px;
 }
 
-#main-shopping{
+#main-shopping {
     float: left;
     width: 332px;
     height: 882px;
@@ -549,40 +535,40 @@ main {
     margin-bottom: 8px;
 }
 
-#main-shopping iframe{
+#main-shopping iframe {
     width: 100%;
     height: 100%;
-
 }
 
-#sub-list li.highlight{
-border-bottom: 3px solid #00c73c;
-color: #00b336;
-height: 45px;
-font-weight: 700;
+#sub-list li.highlight {
+    border-bottom: 3px solid #00c73c;
+    color: #00b336;
+    height: 45px;
+    font-weight: 700;
 }
 
-#sub-list{
+#sub-list {
     width: 603px;
     position: relative;
 }
 
-#sub-list ul{
+#sub-list ul {
     list-style: none;
     margin: 0;
-    padding:0;
+    padding: 0;
     white-space: nowrap;
     overflow: hidden;
     height: 45px;
     width: 700px;
 }
 
-#sub-list li{
+#sub-list li {
     float: left;
     margin-right: 10px;
     padding: 14px 7px 0;
     font-size: 14px;
-    font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+    font-family: NanumSquare, Dotum, '돋움', Helvetica, AppleSDGothicNeo,
+        sans-serif;
 }
 
 .opacity {
@@ -606,14 +592,13 @@ font-weight: 700;
     width: 15px;
 }
 
-
 #sub-all span:last-child {
     position: absolute;
     top: 15px;
     left: 12px;
     width: 20px;
     height: 14px;
-    background-image: url(./sp_themecast.png);
+    background-image: url(./img/sp_themecast.png);
     background-repeat: no-repeat;
     background-position: -218px -257px;
 }
@@ -624,7 +609,7 @@ font-weight: 700;
     left: 16px;
     width: 8px;
     height: 16px;
-    background-image: url(./sp_themecast.png);
+    background-image: url(./img/sp_themecast.png);
     background-repeat: no-repeat;
     background-position: -320px 0;
 }
@@ -635,7 +620,7 @@ font-weight: 700;
     left: 16px;
     width: 8px;
     height: 16px;
-    background-image: url(./sp_themecast.png);
+    background-image: url(./img/sp_themecast.png);
     background-repeat: no-repeat;
     background-position: -320px -52px;
 }
@@ -648,14 +633,18 @@ section {
     border-right: 1px solid #32435e;
 }
 
-
-#sub-list, #sub-all, #sub-pre, #sub-next{
-    float:left;
+#sub-list,
+#sub-all,
+#sub-pre,
+#sub-next {
+    float: left;
     height: 45px;
-    padding:0;
+    padding: 0;
 }
 
-#sub-all, #sub-pre, #sub-next{
+#sub-all,
+#sub-pre,
+#sub-next {
     position: relative;
     width: 45px;
     border: none;
@@ -663,11 +652,10 @@ section {
     background: white;
 }
 
-#main-category-top{
+#main-category-top {
     display: inline-block;
     width: 100%;
     border-bottom: 1px solid #ebeef3;
-
 }
 
 #main-third-block,
@@ -677,7 +665,7 @@ section {
     vertical-align: top;
 }
 
-#main-event{
+#main-event {
     float: left;
     width: 740px;
     height: 130px;
@@ -687,27 +675,30 @@ section {
     margin-right: 8px;
 }
 
-#main-third-ad{
+#main-third-ad {
     float: left;
     width: 332px;
     height: 130px;
     background: white;
 }
 
-#main-centered{
+#main-centered {
     padding: 8px 10px 0;
     width: 1100px;
 }
 
-.inline-block{
+.inline-block {
     display: inline-block;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
-
 
 section {
     border: 1px solid #dee3eb;
